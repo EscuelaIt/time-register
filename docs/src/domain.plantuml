@@ -1,0 +1,22 @@
+@startuml
+
+class TimeRegister
+class User
+class Project 
+class Interval {
+  startTime
+  endTime
+  begin()
+  end()
+}
+
+class Customer
+
+TimeRegister *-down-> "n" User
+User *-down-> "n" Project
+User *-down-> "n" Customer
+Customer *-down-> "n" Project
+User *-down-> "n" Interval
+Interval *-> "1" Project
+
+@enduml
