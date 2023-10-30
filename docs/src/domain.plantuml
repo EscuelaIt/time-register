@@ -3,20 +3,20 @@
 class TimeRegister
 class User
 class Project 
+class Category
 class Interval {
   startTime
   endTime
   begin(project Project)
   end()
 }
-
 class Customer
 
 TimeRegister *-down-> "n" User
-User *-down-> "n" Project
 User *-down-> "n" Customer
 Customer *-down-> "n" Project
 User *-down-> "n" Interval
+User *-down-> "n" Category
 Interval *-> "1" Project
-
+Interval o-down-> "n" Category
 @enduml
