@@ -1,0 +1,15 @@
+@startuml
+state Inicial
+Inicial : No hay intervalos abiertos
+state Opened
+Opened : Se trabaja en una tarea
+state Closed
+Closed: Se ha cerrado el intervalo abierto
+
+[*] --> Inicial
+Inicial --> Opened : Abrir un intervalo
+Opened --> Opened : Intento de abrir otro intervalo (falla porque ya hay abierto)
+Opened --> Closed : Terminar un intervalo
+Closed --> Closed : Intento de abrir intervalo (falla porque no hay intervalos abiertos)
+Closed -right-> Opened : Abrir un intervalo
+@enduml
