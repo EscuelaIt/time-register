@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor User
+usecase "Login" as Login
+usecase "Register" as Register
+usecase "Logout" as Logout
+usecase "Send token" as Token
+
+User --> Login
+User --> Register 
+User --> Logout
+
+Register ..> Token: include
+Login ..> Token: include
+@enduml
