@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor Frontend
+usecase "CategoryList" as List
+usecase "CategoryShow" as Show
+usecase "CategoryStore" as Store
+usecase "CategoryUpdate" as Update
+usecase "CategoryDestroy" as Delete
+
+Frontend --> List
+Frontend --> Show 
+Frontend --> Store
+Frontend --> Update
+Frontend --> Delete
+
+Store ..> Show: include
+Update ..> Show: include
+@enduml

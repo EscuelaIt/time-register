@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor Frontend
+usecase "CustomerList" as List
+usecase "CustomerShow" as Show
+usecase "CustomerStore" as Store
+usecase "CustomerUpdate" as Update
+usecase "CustomerDestroy" as Delete
+
+Frontend --> List
+Frontend --> Show 
+Frontend --> Store
+Frontend --> Update
+Frontend --> Delete
+
+Store ..> Show: include
+Update ..> Show: include
+@enduml

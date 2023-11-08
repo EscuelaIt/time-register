@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor Frontend
+usecase "ProjectList" as List
+usecase "ProjectShow" as Show
+usecase "ProjectStore" as Store
+usecase "ProjectUpdate" as Update
+usecase "ProjectDestroy" as Delete
+
+Frontend --> List
+Frontend --> Show 
+Frontend --> Store
+Frontend --> Update
+Frontend --> Delete
+
+Store ..> Show: include
+Update ..> Show: include
+@enduml

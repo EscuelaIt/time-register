@@ -12,6 +12,18 @@ Backend basado en API REST para el registro de tiempo dedicado a proyectos
 
 ![Autenticación](/docs/auth-usecases.svg)
 
+### Clientes
+
+![Clientes](/docs/customer-usecases.svg)
+
+### Proyectos
+
+![Projects](/docs/project-usecases.svg)
+
+### Categorías
+
+![Categorías](/docs/category-usecases.svg)
+
 ### Intervalos de trabajo 
 
 ![Intervalos](/docs/interval-usecases.svg)
