@@ -8,8 +8,7 @@ usecase "IntervalOpen" as Open
 usecase "IntervalClose" as Close
 usecase "IntervalUpdate" as Update
 usecase "IntervalDestroy" as Delete
-usecase "IntervalAttachCategory" as Attach
-usecase "IntervalDetachCategory" as Detach
+usecase "UpdateIntervalCategory"
 
 Frontend --> List
 Frontend --> Show 
@@ -17,8 +16,7 @@ Frontend --> Open
 Frontend --> Close
 Frontend --> Update
 Frontend --> Delete
-Frontend --> Attach
-Frontend --> Detach
+Frontend --> UpdateIntervalCategory
 
 Open ..> Show: include
 Close ..> Show: include

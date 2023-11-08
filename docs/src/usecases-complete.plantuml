@@ -74,8 +74,7 @@ package "Interval" {
   usecase "IntervalClose"
   usecase "IntervalUpdate" 
   usecase "IntervalDestroy" 
-  usecase "IntervalAttachCategory"
-  usecase "IntervalDetachCategory" 
+  usecase "UpdateIntervalCategory"
   
   Frontend --> IntervalList
   Frontend --> IntervalShow 
@@ -83,8 +82,7 @@ package "Interval" {
   Frontend --> IntervalClose
   Frontend --> IntervalUpdate
   Frontend --> IntervalDestroy
-  Frontend --> IntervalAttachCategory
-  Frontend --> IntervalDetachCategory
+  Frontend --> UpdateIntervalCategory
   
   IntervalOpen ..> IntervalShow: include
   IntervalClose ..> IntervalShow: include
