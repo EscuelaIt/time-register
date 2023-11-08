@@ -1,0 +1,26 @@
+@startuml
+
+actor Frontend
+
+package Auth {
+}
+
+package "Customer" {
+}
+
+package "Project" {
+}
+  
+package "Category" {
+}
+
+package "Interval" {
+}
+
+Frontend --> Auth
+Frontend --> Customer
+Frontend --> Project
+Frontend --> Category
+Frontend --> Interval
+
+@enduml

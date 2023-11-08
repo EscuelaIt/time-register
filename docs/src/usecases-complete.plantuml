@@ -1,0 +1,94 @@
+@startuml
+left to right direction
+actor Frontend
+
+package Auth {
+  usecase "Login" as Login
+  usecase "Register" as Register
+  usecase "Logout" as Logout
+  usecase "Send token" as Token
+  
+  Frontend --> Login
+  Frontend --> Register 
+  Frontend --> Logout
+  
+  Register ..> Token: include
+  Login ..> Token: include
+}
+
+package "Customer" {
+  usecase "CustomerList" 
+  usecase "CustomerShow" 
+  usecase "CustomerStore" 
+  usecase "CustomerUpdate" 
+  usecase "CustomerDestroy" 
+  
+  Frontend --> CustomerList
+  Frontend --> CustomerShow 
+  Frontend --> CustomerStore
+  Frontend --> CustomerUpdate
+  Frontend --> CustomerDestroy
+  
+  CustomerStore ..> CustomerShow: include
+  CustomerUpdate ..> CustomerShow: include
+}
+
+package "Project" {
+  usecase "ProjectList"
+  usecase "ProjectShow"
+  usecase "ProjectStore"
+  usecase "ProjectUpdate"
+  usecase "ProjectDestroy"
+  
+  Frontend --> ProjectList
+  Frontend --> ProjectShow 
+  Frontend --> ProjectStore
+  Frontend --> ProjectUpdate
+  Frontend --> ProjectDestroy
+  
+  ProjectStore ..> ProjectShow: include
+  ProjectUpdate ..> ProjectShow: include
+}
+  
+package "Category" {
+  usecase "CategoryList" 
+  usecase "CategoryShow" 
+  usecase "CategoryStore"
+  usecase "CategoryUpdate"
+  usecase "CategoryDestroy"
+  
+  Frontend --> CategoryList
+  Frontend --> CategoryShow 
+  Frontend --> CategoryStore
+  Frontend --> CategoryUpdate
+  Frontend --> CategoryDestroy
+  
+  CategoryStore ..> CategoryShow: include
+  CategoryUpdate ..> CategoryShow: include
+}
+
+package "Interval" {
+  usecase "IntervalList"
+  usecase "IntervalShow" 
+  usecase "IntervalOpen" 
+  usecase "IntervalClose"
+  usecase "IntervalUpdate" 
+  usecase "IntervalDestroy" 
+  usecase "IntervalAttachCategory"
+  usecase "IntervalDetachCategory" 
+  
+  Frontend --> IntervalList
+  Frontend --> IntervalShow 
+  Frontend --> IntervalOpen
+  Frontend --> IntervalClose
+  Frontend --> IntervalUpdate
+  Frontend --> IntervalDestroy
+  Frontend --> IntervalAttachCategory
+  Frontend --> IntervalDetachCategory
+  
+  IntervalOpen ..> IntervalShow: include
+  IntervalClose ..> IntervalShow: include
+  IntervalUpdate ..> IntervalShow: include
+}
+
+@enduml
