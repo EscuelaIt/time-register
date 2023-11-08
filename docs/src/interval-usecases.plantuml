@@ -1,24 +1,24 @@
 @startuml
 left to right direction
 
-actor User
-usecase "List intervals" as List
-usecase "Show interval" as Show
-usecase "Open interval" as Open
-usecase "Close interval" as Close
-usecase "Update Interval" as Update
-usecase "Delete Interval" as Delete
-usecase "Attach Category" as Attach
-usecase "Detach Category" as Detach
+actor Frontend
+usecase "IntervalList" as List
+usecase "IntervalShow" as Show
+usecase "IntervalOpen" as Open
+usecase "IntervalClose" as Close
+usecase "IntervalUpdate" as Update
+usecase "IntervalDestroy" as Delete
+usecase "IntervalAttachCategory" as Attach
+usecase "IntervalDetachCategory" as Detach
 
-User --> List
-User --> Show 
-User --> Open
-User --> Close
-User --> Update
-User --> Delete
-User --> Attach
-User --> Detach
+Frontend --> List
+Frontend --> Show 
+Frontend --> Open
+Frontend --> Close
+Frontend --> Update
+Frontend --> Delete
+Frontend --> Attach
+Frontend --> Detach
 
 Open ..> Show: include
 Close ..> Show: include
