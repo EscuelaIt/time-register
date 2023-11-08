@@ -31,9 +31,13 @@ Paquetes de casos de uso:
 ### Interval
 
 ![Intervalos](/docs/interval-usecases.svg)
-
+ 
 ## Estados de intervalo
 
 Solamente es posible tener un intervalo de trabajo abierto a la vez.
 
 ![Estados de intervalo](/docs/interval-opened-closed-states.svg)
+
+## Diagrama de despliegue
+
+![Diagrama de despligue API REST](/docs/deploy-diagram.svg)
