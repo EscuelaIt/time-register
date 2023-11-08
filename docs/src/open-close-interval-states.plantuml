@@ -1,20 +1,15 @@
 @startuml
-state Initial
-Initial : No hay intervalos abiertos
 state Opened
 Opened : Se trabaja en una tarea
 state Closed
 Closed: Se ha cerrado el intervalo abierto
 
-[*] --> Initial
-Initial --> Opened : Open interval
-Opened --> Opened : Open interval (falla porque ya hay un intervalo abierto)
-Opened --> Closed : Close interval
-Closed --> Closed : Close interval (falla porque no hay intervalos abiertos)
+[*] --> Closed
+Opened -left-> Closed : Close interval
 Closed -right-> Opened : Open interval
 
 
-note left of Opened
+note right of Opened
   Solo es posible tener
   un intervalo de trabajo abierto
 end note
