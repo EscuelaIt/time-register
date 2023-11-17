@@ -2,18 +2,18 @@
 
 Actor Frontend
 node WebServer
-component TimeRegisterAPI
+component TimeRegisterAPI <<API REST>>
 component Laravel
 component MariaDB
 component Nginx
 component Linux_SO
 
 Frontend -> WebServer : http
-WebServer -right-> TimeRegisterAPI : API REST
-TimeRegisterAPI -down-> Laravel : Framework
-Laravel ..> MariaDB : use
-WebServer .down.> Nginx : has
-WebServer .down.> Linux_SO : has
-WebServer .down.> MariaDB : has
+WebServer -right-> TimeRegisterAPI 
+TimeRegisterAPI .down.> Laravel : Framework
+TimeRegisterAPI ..> MariaDB : Database
+WebServer -down-> Nginx 
+WebServer -down-> Linux_SO 
+WebServer -down-> MariaDB 
+WebServer -down-> Laravel
 @enduml
-
