@@ -1,6 +1,8 @@
 # Registro de tiempo de proyectos
 
-Backend basado en API REST para el registro de tiempo dedicado a proyectos
+Backend basado en API REST para el registro de tiempo dedicado a proyectos.
+
+El desarrollo de este proyecto se explicó en el [Curso de API REST con Laravel](https://escuela.it/cursos/curso-laravel-api). El código del proyecto del API se encuentra en <https://github.com/EscuelaIt/timer-back>.
 
 ## Dominio
 
